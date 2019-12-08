@@ -1,0 +1,74 @@
+{
+    "floreria1": [
+        {
+            "id": 1,
+            "name": "adorno1",
+            "precio": 50,
+            "imagen": "https://picsum.photos/200/300" ,
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 2,
+            "name": "adorno2",
+            "precio": 170,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 3,
+            "name": "adorno3",
+            "precio": 240,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 4,
+            "name": "adorno4",
+            "precio": 154,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 5,
+            "name": "adorno5",
+            "precio": 554,
+            "imagen":"https://picsum.photos/200/300" ,
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 6,
+            "name": "adorno6",
+            "precio": 870,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 7,
+            "name": "adorno7",
+            "precio": 556,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 8,
+            "name": "adorno8",
+            "precio": 475,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 9,
+            "name": "adorno9",
+            "precio": 707,
+            "imagen":"https://picsum.photos/200/300" ,
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 10,
+            "name": "adorno10",
+            "precio": 625,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        }
+]
+}

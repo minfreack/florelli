@@ -1,0 +1,170 @@
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-lead-in">Arte floral</div>
+      <div class="intro-heading text-uppercase">Stop and smell the flowers</div>
+    </div>
+  </div>
+</header>
+
+<section class="page-section" id="catalogo">
+  <div class="container">
+      <div class="row">
+       <div class="col-lg-12 text-center">
+             <h2 class="section-heading text-uppercase">Sección PRODUCTOS</h2>
+             <form name="form" #f="ngForm">
+              <div class="form-group">
+                  <label for="name">Nombre:</label>
+                  <input type="text" class="form-control" id="nombre" name="nombre"
+                  [(ngModel)]="data.nombre" #nombre="ngModel" required minlength="3" pattern="[a-z A-Z]*">
+                  <div *ngIf="nombre.invalid || (nombre.dirty && nombre.touched)">
+                      <div *ngIf="nombre.hasError('required')" class="alert alert-danger">
+                          Nombre is required
+                      </div>
+                      <div *ngIf="nombre.hasError('minlength')" class="alert alert-danger">
+                          Name must be at least 3 character long
+                      </div>
+                      <div *ngIf="nombre.hasError('pattern')" class="alert alert-danger">
+                          Name only accept letters
+                      </div>
+                  </div>
+                  <label for="company">Descripcion:</label>
+                  <input type="text" class="form-control" id="descripcion" name="descripcion"
+                  [(ngModel)]="data.descripcion" #descripcion="ngModel" required minlength="3">
+                  <div *ngIf="descripcion.invalid || (descripcion.dirty && descripcion.touched)">
+                      <div *ngIf="descripcion.hasError('required')" class="alert alert-danger">
+                          Description is required
+                      </div>
+                      <div *ngIf="descripcion.hasError('minlength')" class="alert alert-danger">
+                          Descripcion must be at least 3 character long
+                      </div>
+                      </div>
+                      <label for="name">Imagen:</label>
+                  <input type="text" class="form-control" id="imagen" name="imagen"
+                  [(ngModel)]="data.imagen" #imagen="ngModel" required>
+                  <div *ngIf="imagen.invalid || (imagen.dirty && imagen.touched)">
+                      <div *ngIf="imagen.hasError('required')" class="alert alert-danger">
+                          Imagen is required
+                      </div>
+                  </div>
+                  <label for="name">Categoría:</label>
+                  <input type="text" class="form-control" id="categoria" name="categoria"
+                  [(ngModel)]="data.categoria" #categoria="ngModel" required>
+                  <div *ngIf="categoria.invalid || (categoria.dirty && categoria.touched)">
+                      <div *ngIf="categoria.hasError('required')" class="alert alert-danger">
+                          Categoría is required
+                      </div>
+                  </div>
+                  <label for="phone">Precio:</label>
+                  <input type="number" class="form-control" id="precio" name="precio"
+                  [(ngModel)]="data.precio" #precio="ngModel" required maxlength="10" pattern="[0-9]*">
+                  <div *ngIf="precio.invalid || (precio.dirty && precio.touched)">
+                      <div *ngIf="precio.hasError('required')" class="alert alert-danger">
+                          Precio is required
+                      </div>
+                  </div>
+                  <label for="stock">Stock:</label>
+                  <input type="number" class="form-control" id="stock" name="stock"
+                  [(ngModel)]="data.stock" #stock="ngModel" required>
+                  <div *ngIf="stock.invalid || (stock.dirty && stock.touched)">
+                      <div *ngIf="stock.hasError('required')" class="alert alert-danger">
+                          Stock is required
+                      </div>
+                  </div>
+              </div>
+          </form>
+        <div>
+        <button type="submit" (click)="onSubmit(data)" class="btn btn-primary">Añadir</button>
+      </div>
+           </div>
+       <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of arreglos">
+         <div class="card h-100">
+           <a href="#"><img class="card-img-top img-fluid" src={{product.imagen}} alt=""></a>
+           <div class="card-body">
+             <h4 class="card-title">
+               <a href="#">{{product.nombre}}</a>
+             </h4>
+             <h5>${{product.precio}}</h5>
+             <p class="card-text">{{product.descripcion}}</p>
+             <td><a class="btn btn-warning" (click)="verDatos(product)" data-toggle="modal" data-target="#exampleModal"><i class="far fa-edit"></i></a></td>
+                <td><a class="btn btn-danger" (click)="verDatos(product)" data-toggle="modal" data-target="#exampleModal2"><i class="fas fa-trash"></i></a></td>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </section>
+  <div class="modal fade" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                <form name="form" #f="ngForm">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre"
+                            [(ngModel)]="data.nombre" #nombre="ngModel" required minlength="3" pattern="[a-z A-Z]*">
+                            <div *ngIf="nombre.invalid || (nombre.dirty && nombre.touched)">
+                                <div *ngIf="nombre.hasError('required')" class="alert alert-danger">
+                                    Nombre is required
+                                </div>
+                                <div *ngIf="nombre.hasError('minlength')" class="alert alert-danger">
+                                    Name must be at least 3 character long
+                                </div>
+                                <div *ngIf="nombre.hasError('pattern')" class="alert alert-danger">
+                                    Name only accept letters
+                                </div>
+                            </div>
+                            <label for="company">Descripcion:</label>
+                            <input type="text" class="form-control" id="descripcion" name="descripcion"
+                            [(ngModel)]="data.descripcion" #descripcion="ngModel" required minlength="3">
+                            <div *ngIf="descripcion.invalid || (descripcion.dirty && descripcion.touched)">
+                                <div *ngIf="descripcion.hasError('required')" class="alert alert-danger">
+                                    Description is required
+                                </div>
+                                <div *ngIf="descripcion.hasError('minlength')" class="alert alert-danger">
+                                    Company must be at least 3 character long
+                                </div>
+                                </div>
+                            <label for="phone">Precio:</label>
+                            <input type="number" class="form-control" id="precio" name="precio"
+                            [(ngModel)]="data.precio" #precio="ngModel" required maxlength="10" pattern="[0-9]*">
+                            <div *ngIf="precio.invalid || (precio.dirty && precio.touched)">
+                                <div *ngIf="precio.hasError('required')" class="alert alert-danger">
+                                    Precio is required
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="onEdit(data)" data-dismiss="modal">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal2" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" (click)="onDelete(data.id)" data-dismiss="modal" class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>

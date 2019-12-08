@@ -1,0 +1,74 @@
+{
+    "floreria2": [
+        {
+            "id": 1,
+            "name": "rosas1",
+            "precio": 540,
+            "imagen": "https://picsum.photos/200/300" ,
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 2,
+            "name": "rosas2",
+            "precio": 1700,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 3,
+            "name": "rosas3",
+            "precio": 2400,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 4,
+            "name": "rosas4",
+            "precio": 123,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 5,
+            "name": "rosas5",
+            "precio": 54,
+            "imagen":"https://picsum.photos/200/300" ,
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 6,
+            "name": "rosas6",
+            "precio": 80,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 7,
+            "name": "rosas7",
+            "precio": 56,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 8,
+            "name": "rosas8",
+            "precio": 47,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 9,
+            "name": "rosas9",
+            "precio": 745,
+            "imagen":"https://picsum.photos/200/300" ,
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        },
+        {
+            "id": 10,
+            "name": "rosas10",
+            "precio": 647,
+            "imagen": "https://picsum.photos/200/300",
+            "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+        }
+]
+}
